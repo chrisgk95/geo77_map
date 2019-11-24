@@ -1,38 +1,39 @@
   
 <!DOCTYPE html>
 <html>
+
 <head>
 
-<title>Botanischer Garten Tuebingen</title>
+	<title>Botanischer Garten Tuebingen</title>
 
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css" integrity="sha512-
+	puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+	crossorigin=""/>
 
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css" integrity="sha512-
-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
-crossorigin=""/>
-
-<script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js" integrity="sha512-
-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA=="
-crossorigin=""></script>
-
+	<script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js" integrity="sha512-
+	nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA=="
+	crossorigin=""></script>
+	
 </head>
+
 
 <body>
 
-<h1>Karte von Tuebingen</h1>
-<p>Hier sieht man ein Kartenausschnit von Tuebingen.</p>
+	<h1>Karte von Tuebingen</h1>
+	<p>Hier sieht man ein Kartenausschnitt von Tuebingen.</p>
 
-<div id="mapid" style="width: 600px; height: 400px; position: relative;"></div>
+	<div id="mapid" style="width: 600px; height: 400px; position: relative;"></div>
 
 <script>
-var mymap = L.map('mapid').setView([48.520, 9.0556]).setZoom(5);
 
-var OSM_background =
-L.tileLayer('https://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png').addTo(mymap);
+	var mymap = L.map('mapid').setView([48.520, 9.0556]).setZoom(18);
 
-var markBota = L.marker([48.523549, 9.057546]).addTo(mymap);
+	var OSM_background =
+	L.tileLayer('https://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png').addTo(mymap);
 
-markBota.bindPopup("<p>This is the Botanical Garden</p>");
+	var markBota = L.marker([48.523549, 9.057546]).addTo(mymap);
 
+	markBota.bindPopup("<p>Das ist der botanische Garten</p>");
 
 </script>
 
