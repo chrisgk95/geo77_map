@@ -45,7 +45,7 @@
 	"Open Topo Map": OTM_basemap		//Zoom nicht ausreichend, daher kein Zoom auf Bota
 	};
 
-	var legend = L.control.layers(basemaps, null, {}).addTo(mymap);
+	var legend = L.control.layers(basemaps, null, {collapsed: false}).addTo(mymap);
 	
 	
 	//Marker mit Text
