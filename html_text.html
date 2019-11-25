@@ -26,16 +26,22 @@
 
 <script>
 
+	// Zoom auf Kartenausschnitt
 	var mymap = L.map('mapid').setView([48.5235, 9.05754]).setZoom(18);
-
+ 
+	//Basemap 1
 	var OSM_basemap =
 	L.tileLayer('https://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png').addTo(mymap);
 	
+	//Basemap 2
 	var Esri_basemap = 
 	L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}');
 	
+	//Basemap 3
+	var OTM_basemap = 
+	L.tileLayer('https://{s}.tile.thunderforest.com/transport-dark/{z}/{x}/{y}.png?apikey={apikey}');
 	
-	
+	//Marker mit Text
 	var markBota = L.marker([48.523540, 9.057540]).addTo(mymap);
 
 	markBota.bindPopup("<p>Das ist der botanische Garten</p>");
