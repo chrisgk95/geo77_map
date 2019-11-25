@@ -42,6 +42,13 @@
 	var OTM_basemap = 
 	L.tileLayer('https://{s}.tile.thunderforest.com/transport-dark/{z}/{x}/{y}.png?apikey={apikey}').addTo(mymap);
 	
+	var basemaps = {
+	"Open Street Map": OSM_basemap,
+	"ESRI World": ESRI_basemap,
+	"Dark Mode": OTM_basemap
+	};
+
+	var legend = L.control.layers(basemaps, null, {}).addTo(mymap);
 	
 	//Marker mit Text
 	var markBota = L.marker([48.523540, 9.057540]).addTo(mymap);
