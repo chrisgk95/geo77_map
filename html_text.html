@@ -35,13 +35,17 @@
 	L.tileLayer('https://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png').addTo(mymap);
 	
 	//Basemap 2
-	var otm_basemap = L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png').addTo(mymap);
+	var OTM_basemap = L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png');
+	
+	//Basemap 3
+	var OSM_HOT = L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png');
 	
 	
 	//Legende einfügen
 	var basemaps = {
 	"Open Street Map": OSM_basemap,
-	"Open Topo Map": otm_basemap		//Zoom nicht ausreichend, daher kein Zoom auf Bota
+	"Open Topo Map": OTM_basemap		//Zoom nicht ausreichend, daher kein Zoom auf Bota
+	"Open Street Map 2": OSM_HOT
 	};
 
 	var legend = L.control.layers(basemaps, null, {}).addTo(mymap);
