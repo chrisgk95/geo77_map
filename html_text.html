@@ -793,7 +793,15 @@
 	}}).addTo(mymap);
 	
 
+	var overlay_DTK1000 = L.tileLayer.wms("http://sg.geodatenzentrum.de/wms_dtk1000", {
+	layers: 'dtk1000',
+	format: 'image/png',
+	transparent: true,
+	attribution: "SG.Geodatenzentrum"
+	});
 	
+	overlay_DTK1000.addTo(mymap)
+
 	
 
 	
