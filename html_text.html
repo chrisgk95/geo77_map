@@ -778,10 +778,8 @@
 { "type": "Feature", "properties": { "fid": 22693, "EV_DATE": 20190919, "EV_TIME": 31919.46, "LAT": 48.289, "LON": 9.029, "DEPTH": 12.0, "DEP_COMM": null, "MAG": 2.0, "MAG_TYPE": "ML", "INTENSITY": null, "INT_SCALE": null, "ISO_DATE": null, "ISO_TIME": "03:19:19.460", "PT_SIZE": 2.0, "EV_TYPE": "ke", "EXPL_DE": "tektonisch", "EXPL_EN": "known earthquake", "SOURCE": "LED", "EV_ID": 1190919001 }, "geometry": { "type": "Point", "coordinates": [ 9.029, 48.289 ] } }
 ]
 };
-	
-	var overlay_eq_points = L.geoJSON(eq_points,  {pointToLayer: function (feature, latlng) {return L.circleMarker(latlng, orangeMarker);
-	}}).addTo(mymap);
-	
+
+
 	var orangeMarker = {
 	radius: 8,
 	fillColor: "#ff7800",
@@ -790,6 +788,11 @@
 	opacity: 1,
 	fillOpacity: 0.6
 	};
+	
+	var overlay_eq_points = L.geoJSON(eq_points,  {pointToLayer: function (feature, latlng) {return L.circleMarker(latlng, orangeMarker);
+	}}).addTo(mymap);
+	
+
 	
 	
 
